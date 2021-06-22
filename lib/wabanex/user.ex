@@ -23,3 +23,4 @@ defmodule Wabanex.User do
     |> unique_constraint([:email])
   end
 end
+
