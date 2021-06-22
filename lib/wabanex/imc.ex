@@ -1,4 +1,5 @@
 defmodule Wabanex.IMC do
+  @spec calculate(map) :: {:error, <<_::224>>} | {:ok, any}
   def calculate(%{"filename" => filename}) do
     filename
     |> File.read()
