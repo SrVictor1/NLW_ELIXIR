@@ -13,6 +13,7 @@ defmodule Wabanex.User do
 
     timestamps()
   end
+
   def changeset(params) do
     %__MODULE__{}
     |> cast(params, @fields)
@@ -23,4 +24,3 @@ defmodule Wabanex.User do
     |> unique_constraint([:email])
   end
 end
-
