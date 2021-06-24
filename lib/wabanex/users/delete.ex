@@ -5,17 +5,12 @@ defmodule Wabanex.Users.Delete do
   def deleta(id) do
     id
     |> Get.call()
-    |> handler_response()
-  end
+    |> case do
+      {:ok, id} ->
+        Repo.delete(id)
 
-  defp handler_response({:ok, props}) do
-    props
-    |> Repo.delete!()
-
-    {:ok, "Usuario deletado"}
-  end
-
-  defp handler_response({:error, pramas}) do
-    {:error, pramas}
+      {:error, _} ->
+        "Error not found id for user"
+    end
   end
 end
