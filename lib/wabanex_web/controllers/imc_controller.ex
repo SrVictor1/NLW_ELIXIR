@@ -1,7 +1,7 @@
 defmodule WabanexWeb.IMCcontroller do
   use WabanexWeb, :controller
 
-  alias Wabanex.IMC
+  alias Wabanex.Imc.IMC
   @spec index(Plug.Conn.t(), map) :: Plug.Conn.t()
   def index(conn, parms) do
     parms

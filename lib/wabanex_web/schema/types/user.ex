@@ -6,6 +6,7 @@ defmodule WabanexWeb.Schema.Types.User do
     field :id, non_null(:uuid4)
     field :name, non_null(:string)
     field :email, non_null(:string)
+    field :training, list_of(:training)
   end
 
   @desc "Create object user"

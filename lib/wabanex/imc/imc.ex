@@ -1,4 +1,4 @@
-defmodule Wabanex.IMC do
+defmodule Wabanex.Imc.IMC do
   @spec calculate(map) :: {:error, <<_::224>>} | {:ok, any}
   def calculate(%{"filename" => filename}) do
     filename
